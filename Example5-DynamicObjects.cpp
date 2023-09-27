@@ -2,10 +2,49 @@
 //
 
 #include <iostream>
+#include "SavingsAccount.h"
+using namespace std; 
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    BankAccount b1; // static creation of objects 
+
+    BankAccount* ptr1 = &b1;
+
+    BankAccount* b2 = new BankAccount();// Dynamic object 
+
+    delete b2; // deallocate memory 
+
+    b2 = new BankAccount();
+
+    int size = 3;
+    BankAccount* clientAccounts = new BankAccount[size];
+    string tempName;
+    float tempBalance;
+    for (int i = 0;i < size;i++)
+    {
+        cout << "Enter Owner name:\n";
+        
+        cin >> tempName;
+
+        cout << "Enter Balance:\n";
+        cin >> tempBalance;
+        clientAccounts[i].setOwnerName(tempName);
+        clientAccounts[i].deposit(tempBalance);
+    }
+
+
+    BankAccount** dynamicClientAccounts = new BankAccount * [3];
+
+    dynamicClientAccounts[0] = new BankAccount();
+    dynamicClientAccounts[1] = new SavingsAccount();
+    dynamicClientAccounts[2] = new SavingsAccount();
+
+    dynamicClientAccounts[0]->deposit(300);
+
+
+
+  
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -27,6 +27,7 @@ void BankAccount::withdraw(float amount)
 
 BankAccount::BankAccount()
 {
+    balance = 0;
 }
 
 BankAccount::BankAccount(string o, float b)

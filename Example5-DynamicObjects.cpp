@@ -11,6 +11,8 @@ int main()
 
     BankAccount* ptr1 = &b1;
 
+    BankAccount* ptr2 = &b1; 
+
     BankAccount* b2 = new BankAccount();// Dynamic object 
 
     delete b2; // deallocate memory 

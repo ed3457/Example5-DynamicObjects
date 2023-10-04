@@ -14,8 +14,9 @@ public:
 	// void setBalance(); this will be handled by deposit and withdraw
 
 	void deposit(float amount); 
-	void withdraw(float amount); 
+	virtual void withdraw(float amount);// Virtual enables runtime/dynamic binding
 	BankAccount();
 	BankAccount(string o, float b);
+	BankAccount(BankAccount &c);
 };
 

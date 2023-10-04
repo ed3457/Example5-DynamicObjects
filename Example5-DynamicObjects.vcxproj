@@ -130,10 +130,12 @@
     <ClCompile Include="BankAccount.cpp" />
     <ClCompile Include="Example5-DynamicObjects.cpp" />
     <ClCompile Include="SavingsAccount.cpp" />
+    <ClCompile Include="SuperSavingsAccount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankAccount.h" />
     <ClInclude Include="SavingsAccount.h" />
+    <ClInclude Include="SuperSavingsAccount.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

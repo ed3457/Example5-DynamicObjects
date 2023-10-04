@@ -35,3 +35,11 @@ BankAccount::BankAccount(string o, float b)
     setOwnerName(o);
     balance = b;
 }
+
+// copy constructor
+BankAccount::BankAccount(BankAccount& c)
+{
+    setOwnerName(c.getOwnerName());
+    balance = c.getBalance();
+
+}

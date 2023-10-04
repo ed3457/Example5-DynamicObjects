@@ -12,7 +12,7 @@ public:
 	SavingsAccount();
 	SavingsAccount(string o, float b, float r);
 
-	void withdraw();// override 
+	void withdraw(float amount);// override 
 
 
 };
